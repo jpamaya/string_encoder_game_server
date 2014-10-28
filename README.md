@@ -65,4 +65,4 @@ To run the server, just do
 Then, go to the client application and begin working out the codes!
 If you are running this server locally (at localhost) you will find the server at:
 
-        localhost:4000/word
+        localhost:4567/word
