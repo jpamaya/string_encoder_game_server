@@ -25,4 +25,13 @@ describe Encoder do
     end
   end
 
+  describe '#caesar_encode' do
+    it 'applies alphabetic rotation (caesar algorithm) to the word' do
+      expect(encoder.caesar_encode('abcdefghijklmnopqrstuvwxyz', 0)).to eq 'abcdefghijklmnopqrstuvwxyz'
+      expect(encoder.caesar_encode('abcdefghijklmnopqrstuvwxyz', 1)).to eq 'bcdefghijklmnopqrstuvwxyza'
+      expect(encoder.caesar_encode('abcdefghijklmnopqrstuvwxyz', 2)).to eq 'cdefghijklmnopqrstuvwxyzab'
+      expect(encoder.caesar_encode('gato', 3)).to eq 'jdwr'
+    end
+  end
+
 end
