@@ -113,6 +113,18 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
+    rspec (3.0.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+    rspec-core (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.4)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.4)
     sinatra-contrib (1.4.2)
       backports (>= 2.0)
       multi_json
@@ -144,6 +156,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   jazz_hands
+  rspec
   sinatra!
   sinatra-contrib
   thin

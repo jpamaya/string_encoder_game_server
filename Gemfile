@@ -9,3 +9,6 @@ gem 'thin' # rack server by default
 gem 'virtus'
 gem 'activesupport'
 gem 'jazz_hands'
+
+# Testing
+gem 'rspec'
