@@ -1,6 +1,6 @@
 # This file groups all bundler dependencies available into the Gemfile
 require 'rubygems'
-require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
+require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 
 # Require the gems in the Gemfile
 Bundler.require(:default) if defined?(Bundler)
