@@ -25,6 +25,14 @@ describe Encoder do
     end
   end
 
+  describe '#rotate' do
+    it 'rotates the word letters (to the right)' do
+      expect(encoder.rotate('anyword', 0)).to eq 'anyword'
+      expect(encoder.rotate('anyword', 1)).to eq 'nyworda'
+      expect(encoder.rotate('anyword', 2)).to eq 'ywordan'
+    end
+  end
+
   describe '#caesar_encode' do
     it 'applies alphabetic rotation (caesar algorithm) to the word' do
       expect(encoder.caesar_encode('abcdefghijklmnopqrstuvwxyz', 0)).to eq 'abcdefghijklmnopqrstuvwxyz'
