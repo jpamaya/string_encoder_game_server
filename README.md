@@ -47,10 +47,14 @@ Please note:
 
 3. If you run out of time (the 2 second rule) you will see the following message come back to you:
 
+        TIMEOUT! - You have run out of time, please ask for a new word!
+
 4. When you guess the word correctly, this will tell you what the next challenge url is. When you have submited a correct answer, the server will respond like this:
 
         OK - You have submitted the correct answer to this challenge, your next challenge awaits you at:
         /3ef082a/word
+
+   And it will also tell you any clues for the next challenge.
 
    You will be told to ask for a word to the server to a different url, so you now have to ask the server for the word submitting a GET request like:
 
