@@ -18,11 +18,14 @@ This is the server part of a game that consists of decoding words.
 
 Please note:
 
-1. Each time you ask for a word, it could be a different one!. The idea of the game is that you have to reverse-engineer the algorithm that generates the words.
+1. All words are in lowercase, no numbers, and are common words, all words have more than 4 letters, and they are intuitively easy to reverse-engineer, the important thing is that you use ruby to construct the decoder in each challenge.
 
-2. Sometimes the encoded word may leave you in a position where you have multiple 'candidates' for the decoded word. You can try sending multiple words to the server, you have multiple attempts to guess the correct word.
+2. Each time you ask for a word, it could be a different one!. The idea of the game is that you have to reverse-engineer the algorithm that generates the words.
 
-3. Do not try to cheat the system by hand, the server only waits 2 seconds for you to guess the correct word each time :P. After 2 seconds, you will have to request a new word.
+3. Sometimes the encoded word may leave you in a position where you have multiple 'candidates' for the decoded word. You can try sending multiple words to the server, you have multiple attempts to guess the correct word.
+
+4. Do not try to cheat the system by hand, the server only waits 2 seconds for you to guess the correct word each time :P. After 2 seconds, you will have to request a new word.
+
 
 ##Technical Gameplay
 
