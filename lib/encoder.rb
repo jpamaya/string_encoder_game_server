@@ -1,5 +1,11 @@
 class Encoder
 
+  attr_accessor :generator
+
+  def initialize(random_number_generator = nil)
+    @generator = random_number_generator || RandomGenerator.new
+  end
+
   # Does nothing to the inputted word
   #
   # @param [String] word some word
@@ -31,6 +37,28 @@ class Encoder
   # @return [String] the word with its letters rotated
   def rotate(word, rotations)
     word.split('').rotate(rotations).join
+  end
+
+  # Takes a word, applies vowels_to_numbers, uppercases it and generates random lowercase letters between the resulting characters
+  #
+  # @param [String] word some word
+  # @return [String] the word with its letters rotated
+  def simple_random_obfuscate(word)
+    letters = vowels_to_numbers(word).upcase.split('')
+    "#{random_obfuscation_segment}#{letters.join(random_obfuscation_segment)}#{random_obfuscation_segment}"
+  end
+
+  # Takes a word and substitutes any vowels with asterisks '*'
+  #
+  # @param [String] word some word
+  # @return [String] the word with no vowels, just asterisks ('*') in place
+  def vowel_obfuscate(word)
+    word.tr('aeiou', '*')
+  end
+
+  def random_obfuscation_segment
+    indexes = generator.random_integers(generator.random(7..15), generator.random(0..(alphabet.size)))
+    alphabet.values_at(*indexes).join
   end
 
   # Applies alphabetic rotation (caesar algorithm) to the word

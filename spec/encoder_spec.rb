@@ -42,4 +42,22 @@ describe Encoder do
     end
   end
 
+  describe '#simple_random_obfuscate' do
+
+    let(:generator) { RandomGenerator.new(1234) }
+    let(:encoder) { Encoder.new(generator) }
+
+    it 'takes a word, applies vowels_to_numbers, uppercases it and generates random lowercase letters between the resulting characters' do
+      expect(encoder.simple_random_obfuscate('cosas')).to eq 'feeabbbcdeCyqfqjwpsqmfcg0yqfqjwpsqmfcgSyqfqjwpsqmfcg4yqfqjwpsqmfcgSdabdadcdeb'
+    end
+  end
+
+  describe '#vowel_obfuscate' do
+
+    it "substitutes vowels with asterisks ('*')" do
+      expect(encoder.vowel_obfuscate('cosas')).to eq 'c*s*s'
+      expect(encoder.vowel_obfuscate('anyword')).to eq '*nyw*rd'
+    end
+  end
+
 end
