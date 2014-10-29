@@ -21,7 +21,7 @@ class Encoder
   # @param [String] word some word
   # @return [String] the word with vowels substituted by numbers
   def vowels_to_numbers(word)
-    word.gsub(/[aeiou]/, {a: '4', e: '3', i: '1', o: '0', u: '6'}.stringify_keys)
+    word.tr('aeiou','43106')
   end
 
   # Rotates the word letters (to the right)
